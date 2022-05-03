@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Spartan' sans-serif;
+        }
+        h1{
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
+        h2{
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
+        h4{
+            font-size: 20px;
+            color: #222;
+        }
+        h6{
+            font-weight: 16px;
+            font-size: 12px;
+        }
+        p{
+            font-size: 16px;
+            color: #465b52;
+            margin: 15px 0 20px 0;
+        }
+        .section-p1{
+            padding: 40px 80px;
+        }
+        .section-m1{
+            margin: 40px 0;
+        }
+        button.normal{
+            font-size: 14px;
+            font-weight: 15px;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius:4px ;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+        button.normal-2{
+            font-size: 12px;
+            font-weight: 600;
+            padding: 11px 18px;
+            color: #fff;
+            background-color:transparent;
+            border-radius:4px ;
+            cursor: pointer;
+            border: 1px solid #fff;
+            outline: none;
+            transition: 0.2s;
+        }
+        body{
+            width: 100%;
+        }
+        .imgheader{
+            height: 80px;
+            width: 200px;
+            
+        }
+        #header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background: #d4d7e5;
+            box-shadow: 0 10px 20px rgb(0, 0, 0, 0);
+            z-index: 999;
+            position: sticky;
+        }
+        #navbar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #navbar li{
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+        }
+        #navbar li a{
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            transition: 0.3s ease;
+
+        }
+        #navbar li a:hover{
+            color: #088178;
+            background-color:white;
+            border-radius: 5px;
+        }
+        #navbar li a:hover, 
+        #navbar li a.active{
+            color: #1e8079;
+        }
+        #navbar li a.active::after,
+        #navbar li a:hover::after{
+        content: "";
+        width: 30%;
+        height: 2px;
+        background-color: #088178;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+        }
+        .mobile{
+            display: none;
+            align-items: center;
+            position: relative;
+    top: -19px;
+    right: -528px;
+        }
+        /* Home page */
+        #hero{
+            background-image: url("images/AdobeStock_282828365_Preview.jpeg");
+            height: 90vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: top 0% right -53%;
+            background-size: cover;
+            padding: 0 50px;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; */
+        }
+        #hero h4{
+             padding-bottom: 15px;
+        }
+           #hero h1{
+               color: #088178;
+           }
+           #hero button{
+               /* background-image: url("images/AdobeSt"); */
+               /* background-color: cadetblue; */
+               /* background-color: transparent; */
+               background-color: aqua;
+               border-radius: 5px;
+               color: #088178;
+               border: 0;
+               padding: 14px 80px 14px 65px;
+               background-repeat: no-repeat;
+               cursor: pointer;
+               font-weight: 700;
+               font-size: 15px;
+           }
+           /* feature box */
+           #feature .fe-box{
+               width: 140px;
+               text-align: center;
+               padding: 25px 15px;
+               box-shadow: 3px 4px -11px rgb(0, 0, 0);
+               border: 1px solid #cce7d0;
+               border-radius: 4px;
+               margin: 15px 0;
+           }
+           #feature .fe-box:hover{
+                  box-shadow: 10px 10px 54px rgb(238, 221, 221);
+           }
+           #feature .fe-box img{
+                  width: 100%;
+                  margin-bottom: 10px;
+           }
+           #feature .fe-box h6{
+               display: inline-block;
+                 padding: 9px 8px 6px 8px;
+                 line-height: 1;
+                 border-radius: 4px;
+                 color: #088178;
+                 background-color: #fddde4;
+           }
+           #feature{
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               justify-content: space-between;
+               flex-wrap: wrap;
+           }
+           #feature .fe-box:nth-child(2) h6{
+               background-color: rgb(109, 241, 109);
+                
+        }
+           #feature .fe-box:nth-child(3) h6{
+               background-color: rgb(236, 174, 102);
+                
+        }
+           #feature .fe-box:nth-child(4) h6{
+               background-color: rgb(118, 133, 221);
+                
+        }
+           #feature .fe-box:nth-child(5) h6{
+               background-color: rgb(127, 216, 243);
+                
+        }
+           #feature .fe-box:nth-child(6) h6{
+               background-color: rgb(250, 148, 178);
+                
+        }
+        /* Product1 summer collection desgin */
+        #product1{
+            text-align: center;
+           
+        }
+        #product1 .pro{
+                   width: 23%;
+                   min-width: 250px;
+                   padding: 10px 12px;
+                   border: 2px solid #cce7d0;
+                   border-radius: 25px;
+                   cursor: pointer;
+                   box-shadow: 4px 0px 12px rgb(194, 188, 188);
+                    margin: 15px 0;
+                    transition: 0.2s ease;
+                    position: relative;
+        }
+        #product1 .pro img{
+              width: 100px;
+              border-radius: 20px;
+             
+        }
+        #product1 .pro:hover{
+            box-shadow: 20px 20px 30px rgb(209, 199, 199);
+
+        }
+        #product1 .pro .des{
+            text-align: center;
+            padding: 10px 0;
+        }
+        #product1 .pro .des span{
+          color: #606063;
+          font-size: 12px;
+        }
+        #product1 .pro .des h5{
+            padding-top:7px ;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        #product1 .pro .des i{
+              font-size: 12px;
+              color: rgb(245, 230, 18);
+        }
+        #product1 .pro .des h4{
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+        }
+        #product1 .pro .cart{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 15px;
+            background-color: #e8f6ea;
+            /* font-weight: 500; */
+            color: #088178;
+            border: 1px solid #cce7d0;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+
+        #product1 .pro-container{
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               justify-content: space-evenly;
+               flex-wrap: wrap;
+           }
+           #banner{
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+               justify-content: center;
+               background-image: url("https://image.shutterstock.com/image-photo/collage-photos-young-people-fashion-260nw-1724618173.jpg");
+              width: 100%;
+              height: 40vh;
+              background-size: cover;
+              /* background-position: center; */
+            }
+            #banner .repaircolor{
+              color: white;
+        }
+            #banner h2{
+                color: white;
+                font-size: 30px;
+                padding: 10px 0;
+            }
+            #banner h2 span{
+                color:#ef3636;
+            }
+            #banner button:hover{
+                background: #088178;
+            }
+            #sm-banner .banner-box{
+                display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               /* text-align: center; */
+               justify-content: center;
+               background-image: url("https://thumbs.dreamstime.com/b/happy-beautiful-young-woman-blue-dress-hand-holding-shopping-bags-looking-light-banner-background-copy-space-169293855.jpg");
+              width: 450px;
+              height: 50vh;
+              background-size: cover;
+              padding: 30px
+            }
+            #sm-banner .banner-box2{
+              background-image: url("https://images.creativemarket.com/0.1.0/ps/6741144/1160/772/m1/fpnw/wm0/clothes-shop-roll-up-banner-.png?1564138969&s=1a1b87ac382dfabc032d10ab5cc55b18")
+            }
+            #sm-banner{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap:wrap;
+            }
+            #sm-banner h2{
+                color: #fff;
+                font-size: 20px;
+                font-weight: 300;
+            }
+            #sm-banner span{
+                color:#fcf4f4;
+                font-size: 14px;
+                font-weight: 500;
+                padding-bottom: 15px;
+            }
+            #sm-banner .banner-box:hover button{
+                  background-color: #088178;
+                  border: 1px solid #088178;
+            }
+            #banner-3{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 0 50px;
+            }
+            .banner-box{
+                display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               /* text-align: center; */
+               justify-content: center;
+               background-image: url("https://img.freepik.com/free-psd/urban-fashion-banner-template_23-2148652498.jpg?t=st=1651567957~exp=1651568557~hmac=cb62ddad17ebc57c60ae23db53e8edf0fcf13f123f93b2d6a76a41914e130eb9&w=900");
+              min-width: 30%;
+              height: 30vh;
+              margin-bottom: 30px;
+              background-size: cover;
+              background-position: center;
+              padding: 20px
+            }
+            #banner-3 h2{
+                color: rgb(245, 13, 13);
+                font-weight: 800;
+                font-size: 15px;
+            }
+            .banner-box2{
+                background-image: url("https://as1.ftcdn.net/v2/jpg/04/99/59/24/1000_F_499592496_43He5aLYH7WKje9Dh54q75FItkqL5MMs.jpg");
+            }
+            .banner-box3{
+                background-image: url("https://img.freepik.com/free-psd/fashion-banner-template_23-2148509060.jpg?t=st=1651571564~exp=1651572164~hmac=78423baa0dec28e40b59507056fe60cfdd9fe435837c30eebc06dca91d68ac5a&w=900");
+            }
+            #newsletter{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                background-image: url("");
+                background-repeat: no-repeat;
+                background-position: 20% 30%;
+                background-color: #041e42;
+            }
+            #newsletter h4{
+                font-size: 22px;
+                font-weight: 700;
+                color: white;;
+            }
+            #newsletter p{
+                font-size: 14px;
+                font-weight: 600;
+                columns: #818ea0;
+            }
+            #newsletter p span{
+                color: rgb(241, 138, 69);
+            }
+            #newsletter input{
+                height: 3.125rem;
+                padding: 0 1.25em;
+                font-size: 14px;
+                width: 100%;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                outline: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .formbutton{
+                font-size: 14px;
+            font-weight: 15px;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius:4px ;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+            }
+            #newsletter button{
+                background-color: #088178;
+                color: #fff;
+                white-space: nowrap;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            
+         .form{
+                position: relative;
+    right: -547px;
+    top: -65px;
+    border: 0px solid;
+    }
+    #newsletter .form{
+        display: flex;
+        /* width: 100%; */
+    }
+    .Appsimg{
+        height: 50px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    footer h4{
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+    footer p{
+        font-size: 13px;
+        margin: 0 0 8px 0;
+    }
+    footer a{
+        font-size: 13px;
+        text-decoration: none;
+        color: #222;
+        margin: 10px;
+    }
+    footer .follow{
+        margin-top: 20px;
+    }
+    footer .follow i{
+        color: #465b52;
+        padding-right: 4px;
+        cursor: pointer;
+    }
+    footer .install .row img{
+          border: 1px solid #088178;
+          border-radius: 6px;
+
+    }
+    footer .install img{
+        margin: 10px 0 15px 0;
+    }
+    footer .install i:hover, footer a:hover{
+           color: #088178;
+    }
+    footer .copyright{
+        width: 100%;
+        text-align: center;
+    }
+    /* MEDIA QUARY USE */
+
+    @media (max-width:799px) {
+        #navbar{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            height: 100vh;
+            width: 300px;
+            background-color:#E3E6F3;
+            box-shadow: 0 40px 60px rgb(0,0,0.1);
+            padding: 80px 0 0 10px;
+        }
+        #navbar.active{
+            right: 0px;
+        }
+        #navbar li{
+            margin-bottom: 25px;
+        }
+        .mobile{
+            display: none;
+            align-items: center;
+        }
+        .mobile i{
+            color: #1a1a1a;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+        #lg-bag{
+            display: none;
+        }
+        #hero{
+           height: 70vh;
+           padding: 0 80px;
+           background-position: top 30% right 30%;
+        }
+        #feature{
+            justify-content: center;
+        }
+        #feature .fe-box{
+            margin: 15px 15px;
+        }
+        #product1 .pro-container{
+          justify-content: center;
+        }
+        #product.pro{
+            margin: 15px;
+        }
+        #banner{
+            height: 20vh;
+        }
+        #sm-banner .banner-box{
+            min-width: 100%;
+            height: 30vh;
+
+        }
+        #banner3{
+            padding: 0 40px;
+        }
+        #banner3 .banner-box{
+            width: 28%;
+        }
+        #newsletter .form{
+            width: 70%;
+        }
+
+    }
+    @media (max-width:477px) {
+        .section-p1{
+            padding: 20px;
+        }
+        #header{
+            padding: 10px 30px;
+        }
+        h1{
+            font-size: 38px;
+        }
+        h2{
+            font-size: 38px;
+        }
+        #hero{
+            padding: 0 20px;
+            background-position: 55%;
+        }
+        #feature .fe-box{
+            margin-trim:0 0 15px 0;
+
+        }
+        #product .pro{
+            width:100%
+        }
+        #sm-banner .banner-box{
+            height: 40vh;
+        }
+        #sm-banner .banner-box2{
+            margin-top: 20px;
+        }
+        #banner3 .banner-box{
+            width: 100%;
+        }
+        #newsletter .form{
+            width: 100%;
+        }
+        footer .copyright{
+            text-align:start ;
+        }
+    }
+
+   /* .pro{
+               width: 140px;
+               text-align: center;
+               padding: 25px 15px;
+               box-shadow: 3px 4px -11px rgb(0, 0, 0);
+               border: 1px solid #021104;
+               border-radius: 4px;
+               margin: 15px 0;
+       } */
+            </style>
+</head>
+<body>
+    <section id="header">
+     <a href="#"><img  class="imgheader" src="https://th.bing.com/th/id/R.9128ca46262e5f5c64001ca24d1ef06b?rik=oLwPBlp%2f21BhWQ&riu=http%3a%2f%2fwww.citysearch.pk%2fUF%2fCompanies%2f5431%2ffashion-central-logo.png&ehk=WKwNn1whJQfSne782urvrHRPwdME26Ot7TwiCQGhyf8%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt=""></a>
+
+     <div>
+         <ul id="navbar">
+             <li><a class="active" href="home.html">Home</a></li>
+             <li><a href="shop.html">Shop</a></li>
+             <li><a href="blog.html">Blog</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="Contact.html">Contact</a></li>
+             <li><a href="citilink.html"> <i class="fa-solid fa-user"></i></a></li>
+             <a href="#" id="close" ><i class="fas fa-times"></i></a>
+         </ul>
+         <div class="mobile">
+             <a href="citilink.html"> <i class="fa-solid fa-user"></i></a>
+             <i id="bar" class="fas fa-outdent"></i>
+         </div>
+     </div>
+    </section>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+    <section id="hero">
+       <h4>Trade-in-Offer Summer</h4>
+       <h2>Super Value Deal</h2>
+       <h1>On All Product</h1>
+       <p>Save More Coupons & up to 70% Off!</p>
+       <button>Shop Now</button>
+    </section>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="https://www.seekpng.com/png/detail/971-9719245_how-it-works-online-food-order-transparent.png" alt="">
+            <h6>Free Shipping</h6> 
+        </div>
+        <div class="fe-box">
+            <img src="https://www.pngkey.com/png/full/104-1041213_order-online-pizza-delivery-man-png.png" alt="">
+            <h6>Online Order</h6> 
+        </div>
+        <div class="fe-box">
+            <img src="https://www.gannett-cdn.com/-mm-/c7ac669a0f6fb9aa49c9473ab15252f6ce0373ad/c=750-0-2347-1597/local/-/media/2018/02/15/PAGroup/YorkDailyRecord/636543085017215038-save-money.png?quality=10" alt="">
+            <h6>Save Money</h6> 
+        </div>
+        <div class="fe-box">
+            <img src="https://blog.winspireme.com/hubfs/5_Tools_For_Promoting_Your_Fundraising_Event-01.png" alt="">
+            <h6>Pramotions</h6> 
+        </div>
+        <div class="fe-box">
+            <img src="https://cdn.pixabay.com/photo/2018/11/25/06/18/family-3836856_1280.png" alt="">
+            <h6>Happy Sell</h6> 
+        </div>
+        <div class="fe-box">
+            <img src="data:image/jpeg;base64,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" alt="">
+            <h6>F24/7 Support</h6> 
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------ -->
+    <section id="product1" class="section-p1">
+        <h2>Feature Product</h2>
+        <p>Summer Collection New Morden Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTpfLpsdLlgAqtf4IOJy2D9VKMKj_OZVV-JUYx0EXNL55lYAlcBbZzmgk5wQPtxB2eH0XNE5yKQ-Q&usqp=CAc" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Casul Men Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$84</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTqhOGVa_vYAdMGpXUiVU5JGH35Qh0Av-j-maxK5STpFqekunQn5BvuD5hwDyTSLuqaT4znxGeX6aU&usqp=CAc" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Casul Men Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$84</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ95yLzY_YJGRznZeKB6RT5iJ0_lryYzF0J5h0cWHhGJdX3wE-8Vb67ufCozLSekj_RJUjAbWSc5sh9t9B7NpsP5N456RdH6kBqH-gz2IFGbLi0GLSmMWiQOQ&usqp=CAc" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Casul Men Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$84</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQvubV4dq5fE0YEt7cJZRhnooo7OwDTlIpIAU-bxqI8yh8iwoq3iNO2JtngqIZaVDoAnq91V9QST6Y&usqp=CAc" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Casul Men Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$84</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTOCfrb-x_e2O-mAJpvbo7jBz1lE_-k0TkjPuEaHrKDDqi7b3ewt2i_7M40Hz4JH_9Cpyswll8TNg&usqp=CAc" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Casul Men Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$84</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQvubV4dq5fE0YEt7cJZRhnooo7OwDTlIpIAU-bxqI8yh8iwoq3iNO2JtngqIZaVDoAnq91V9QST6Y&usqp=CAc" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Casul Men Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$84</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+          <!--  -------------------------------------------------------------------------------------------------------------------------- -->
+          <div class="pro">
+           <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRowk_xAHE_IGgEPzJV0wSajgD-Gzm3Op0LfUAvw1WfxmGnhiVK4LLlOJggQ5jtATZziWR54TbD-Qo&usqp=CAc" alt="">
+           <div class="des">
+               <span>Adidas</span>
+               <h5>Casul Men Shirts</h5>
+               <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+               </div>
+               <h4>$84</h4>
+           </div>
+           <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+       </div>
+          <div class="pro">
+           <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTeS7ANMauFdTji-fTNuM4FO-o2x_CMpjdsVPT3_55qbsjCLLI7Yu26BYeLzUmhDnzsvhDyQcfdNHs&usqp=CAc" alt="">
+           <div class="des">
+               <span>Adidas</span>
+               <h5>Casul Men Shirts</h5>
+               <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+               </div>
+               <h4>$84</h4>
+           </div>
+           <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+       </div>
+          <div class="pro">
+           <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQkEXKaUV3KQ205QmZI038QLU-NSXhVZqSmo_yRVglqldIgliwQ4VawA8PdlGKyBt2SnLqaftEMJ_g&usqp=CAc" alt="">
+           <div class="des">
+               <span>Adidas</span>
+               <h5>Casul Men Shirts</h5>
+               <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+               </div>
+               <h4>$84</h4>
+           </div>
+           <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+       </div>
+        </div>
+   </section>
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+    <section id="banner" class="section-m1">
+        <h4 class="repaircolor">Repair Service</h4>
+        <h2>Up to <span>70% Off</span>-All-Up T-shirts & Accessories</h2>
+        <button class="normal">Explore More</button>
+    </section>
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+   <section id="product1" class="section-p1">
+    <h2>New Arrivals</h2>
+    <p>Summer Collection New Morden Design</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSjgO3jlkNSYRdTYXe5sBXJ2bdkUxm9IEOjXFOdJN84jNqKmEA37Zmiyt01tcWrsu6j5vjlrSWQipSOkE40NAIDlNHTXR8f2vQRFzQEEl-nLcDri8iVxAc1&usqp=CAE" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>Casul Men Jacket</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS91VnlCUoGM35PmLtyakjOxQNRh9-ALwp4LGUBQJs13YYztpEp4dlAHgmCUx-3uDEl4MV0KU1svEP851SJs6dHdRToaZN5N5RZ7Pzm_g2U&usqp=CAE" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>Casul Men Jacket</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSb1Qn0WI96pPT4aynfI3SIhKMCljCHUOm8ZxRVj3ot_BFCXDtNzX0EptMkndQEaEo4qglt9yraAqxiE1-wuD_OIBAfd4ZfkA&usqp=CAE" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5> casul Men Jacket</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://kxadmin.siyaram.com/product/5SATR0R00000C6307-45/660/C6307-03_1.jpg.webp" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5> Men Jeans</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa6TBH6elM5jUn1Bp5yLsbYOfHrUDvBzQYhw&usqp=CAU" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>Men Jeans</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrMMhvDPFthh7znp5HgZuAxSpIhDi4T2WUsQ&usqp=CAU" alt="">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>Fasion Men Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$84</h4>
+            </div>
+            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+      <!--  -------------------------------------------------------------------------------------------------------------------------- -->
+      <div class="pro">
+       <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1627020296.TEEM0057.webp" alt="">
+       <div class="des">
+           <span>Adidas</span>
+           <h5>Fasion Men Shirts</h5>
+           <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+           </div>
+           <h4>$84</h4>
+       </div>
+       <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+   </div>
+      <div class="pro">
+       <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1620638592.BKT0100.jpeg" alt="">
+       <div class="des">
+           <span>Adidas</span>
+           <h5>Casul Men Shirts</h5>
+           <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+           </div>
+           <h4>$84</h4>
+       </div>
+       <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+   </div>
+      <div class="pro">
+       <img src="https://images-do.nyc3.cdn.digitaloceanspaces.com/lAVtCJXFVr/product_images/1642665450.AP0010.jpeg" alt="">
+       <div class="des">
+           <span>Adidas</span>
+           <h5>Fasion Men Shirts</h5>
+           <div class="star">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+           </div>
+           <h4>$84</h4>
+       </div>
+       <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+   </div>
+    </div>
+</section>
+<!-- ---------------------------------------------------------------------------------------------------- -->
+
+<section id="sm-banner" class="section-p1">
+    <div class="banner-box">
+        <h4>Crazy Deals</h4>
+        <h2>buy 1 get 1 Free</h2>
+        <span>The bast classic dress is on sale at Clicklink</span>
+        <button class="normal-2">Learn More</button>
+    </div>
+    <div class="banner-box banner-box2">
+        <h4>Spring/Summer</h4>
+        <h2>Upcoming Season</h2>
+        <span>The bast classic dress is on sale at Clicklink</span>
+        <button class="normal-2">Collection</button>
+    </div>
+</section>
+<!-- ----------------------------------------------------------------------------------- -->
+<section id="banner-3">
+    <div class="banner-box">
+    </div>
+    <div class="banner-box banner-box2">
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+    </div>
+    <div class="banner-box banner-box3">
+    </div>
+</section>
+<!-- --------------------------------------------------------------- -->
+  <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Sign up For Newsletters</h4>
+          <p>Get Email updates about our latest shop and <span>Special Offers.</span></p>
+           <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="formbutton">Sign Up</button> 
+           </div>
+      </div>
+  </section>
+  <!-- ------------------------------------------------------------------------------- -->
+  <footer class="section-p1">
+      <div class="col">
+          <img class="imgheader" src="https://th.bing.com/th/id/R.9128ca46262e5f5c64001ca24d1ef06b?rik=oLwPBlp%2f21BhWQ&riu=http%3a%2f%2fwww.citysearch.pk%2fUF%2fCompanies%2f5431%2ffashion-central-logo.png&ehk=WKwNn1whJQfSne782urvrHRPwdME26Ot7TwiCQGhyf8%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="">
+          <h4>Contact</h4>
+          <p><strong>Address :</strong>Maharastra, Nagpur Butibori-441108 Five Star Hotel</p>
+          <p><strong>Phone :</strong>(+91)9307402321/(+91)9689750969</p>
+          <p><strong>Email :</strong>bhoyarsanket71@gmail.com</p>
+          <p><strong>Hours :</strong>10.00-18.00 Mon-Sat</p>
+          <div class="follow">
+              <h4>Follow Us</h4>
+              <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-pinterest"></i>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>About</h4>
+          <a href="#">About</a>
+          <a href="#">Dellivary Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Term & condition</a>
+          <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+          <h4>My Account</h4>
+          <a href="#">Sign In</a>
+          <a href="#">View Cart</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Track My Order</a>
+          <a href="#">Help</a>
+      </div>
+      <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store Or Google Play</p>
+          <div class="row">
+              <img  class="Appsimg" src="https://thumbs.dreamstime.com/b/google-play-app-store-icons-google-play-app-store-icons-editable-vector-illustration-isolated-white-background-123024624.jpg" alt="">
+          </div>
+          <p>Secured Payment Gateways</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRALRmCM-L56zHwyGGptBqXlu4u2JFaGd-EakhazieeNGYmCHzyP0U4Z-abJ67Bag_klg&usqp=CAU" alt="">
+      </div>
+      <div class="copyright">
+          <p>2022 Tech - Ecommerce site</p>
+      </div>
+    </footer>
+
+
+    <script>
+        const bar =document.getElementById('bar');
+        const nav = document.getElementById('navbar');
+
+        if(bar){
+            bar.addEventListener('click',()=>{
+                nav.classlist.add('active');
+            })
+            
+        }
+    </script>
+</body>
+</html>
